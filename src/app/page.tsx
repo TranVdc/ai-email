@@ -1,9 +1,10 @@
+import { Button } from "@/components/ui/button";
 
 
 export default async function Home() {
 
 
   return (
-    <h1>Hello world! Vdc</h1>
+    <Button>Hello World</Button>
   );
 }
