@@ -31,7 +31,7 @@ export const exchangeCodeForAccessToken = async (code: string) => {
         },
       },
     );
-
+    console.log(response);
     return response.data as {
       accountId: number;
       accessToken: string;
