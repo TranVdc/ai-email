@@ -80,7 +80,7 @@ export function Mail({
             <Separator />
             <SideBar isCollapsed={isCollapsed} />
             <div className="flex-1"></div>
-            <AskAI isCollapsed={isCollapsed} />
+            {/* <AskAI isCollapsed={isCollapsed} /> */}
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
