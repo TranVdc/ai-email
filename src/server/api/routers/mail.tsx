@@ -12,6 +12,7 @@ export const authoriseAccountAccess = async (
   accountId: string,
   userId: string,
 ) => {
+  console.log(accountId);
   const account = await db.account.findFirst({
     where: {
       id: accountId,
@@ -21,11 +22,10 @@ export const authoriseAccountAccess = async (
       id: true,
       emailAddress: true,
       name: true,
-      // token: true,
-      accessToken: true,
+      token: true,
     },
   });
-  if (!account) throw new Error("Invalid token");
+  if (!account) throw new Error("Invalid token duoctran");
   return account;
 };
 

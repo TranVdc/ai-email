@@ -26,7 +26,7 @@ import { auth } from "@clerk/nextjs/server";
  * @see https://trpc.io/docs/server/context
  */
 export const createTRPCContext = async (opts: { headers: Headers }) => {
-  const user = await auth();
+  const user = await auth()
   return {
     auth: user,
     db,
@@ -103,9 +103,7 @@ const isAuth = t.middleware(({ next, ctx }) => {
   if (!ctx.auth?.userId) {
     throw new Error("Unauthorized");
   }
-  return next({
-    ctx: { ...ctx, auth: ctx.auth! as Required<typeof ctx.auth> },
-  });
+  return next({ ctx: { ...ctx, auth: ctx.auth! as Required<typeof ctx.auth> } });
 });
 
 /**

@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
+import { DashIcon } from "@radix-ui/react-icons"
 import { OTPInput, OTPInputContext } from "input-otp"
-import { Minus } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -35,7 +35,7 @@ const InputOTPSlot = React.forwardRef<
   React.ComponentPropsWithoutRef<"div"> & { index: number }
 >(({ index, className, ...props }, ref) => {
   const inputOTPContext = React.useContext(OTPInputContext)
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index] || {};
+  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
   return (
     <div
@@ -63,7 +63,7 @@ const InputOTPSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<"div">
 >(({ ...props }, ref) => (
   <div ref={ref} role="separator" {...props}>
-    <Minus />
+    <DashIcon />
   </div>
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"

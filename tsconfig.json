@@ -8,11 +8,9 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
 
     /* Strictness */
     "strict": true,
-    "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
     "checkJs": true,
 
@@ -38,7 +36,8 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.mjs"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "*.json"]
 }

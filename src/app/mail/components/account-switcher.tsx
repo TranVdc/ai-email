@@ -34,7 +34,7 @@ export function AccountSwitcher({ isCollapsed }: AccountSwitcherProps) {
           label: "Add account",
           onClick: async () => {
             try {
-              const url = await getAurinkoAuthorizationUrl("Google");
+              const url = await getAurinkoAuthorizationUrl("Office365");
               window.location.href = url;
             } catch (error) {
               toast.error((error as Error).message);
@@ -84,7 +84,7 @@ export function AccountSwitcher({ isCollapsed }: AccountSwitcherProps) {
           <div
             onClick={async (e) => {
               try {
-                const url = await getAurinkoAuthorizationUrl("Google");
+                const url = await getAurinkoAuthorizationUrl("Office365");
                 window.location.href = url;
               } catch (error) {
                 toast.error((error as Error).message);
